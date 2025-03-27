@@ -8,7 +8,7 @@ Requests are made to a web server on the Mebo at port 80. They are made in the c
 
 The commands themselves follow a convention of `${component}_{direction}` for arm/wrist/claw and `move_${direction}` for motion
 
-THe command is provided as a request param to the http endpoint, with additional parameters as required to control speed, duration, etc.
+The command is provided as a request param to the http endpoint, with additional parameters as required to control speed, duration, etc.
 
 The api uses the following naming conventions for its components:
 ```
@@ -108,9 +108,18 @@ Instead of the HTTP API for controls in v1, there appears to be some kind of JSO
 
 `http://192.168.99.1/ajax/command.json?command1=mebolink_message_send(!ARABCDEFGHI)`
 `http://192.168.99.1/ajax/command.json?command1=mouth_led_state()`
+
+A company called Ximpatico seemed to use the Mebo 2.0 and its firmware to develop a robot called the Nabot AI. They published an API here:
+
+- <https://github.com/Ximpatico/NabotPythonAPI>
+
+This code has been updated and confirmed to work with the Mebo 2.0 here:
+
+- <https://github.com/csev1755/python-nabot-mebo2>
+
 Further investigation shows that it is ArduPilot software. 
 
-- <https://discuss.ardupilot.org/t/how-to-use-json-command-to-read-attitude-quaternion-on-web-browser/84529https://discuss.ardupilot.org/t/how-to-use-json-command-to-read-attitude-quaternion-on-web-browser/84529>
+- <https://discuss.ardupilot.org/t/how-to-use-json-command-to-read-attitude-quaternion-on-web-browser/84529>
 - <https://docs.google.com/document/d/12IQFXDRIif06BiriHSCGdiJGZ6zsQ_phQsG_iI6_MAo/edit?pli=1#heading=h.gvvvomuy1uik>
 
 
